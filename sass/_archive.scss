@@ -1,15 +1,15 @@
 .date { 
-  width: 4rem;
+  min-width: 3.5rem;
   display: inline-block;
 }
 
 .date-year-divider { 
   text-align: center;
   font-size: 1.4rem;
-  color: #555; 
-  line-height: .3; 
-  border-bottom: 1px solid #efefef;
-  margin: 3rem 0 1rem 0;
+  color: #555;
+  line-height: 0;
+  border-bottom: 2px dashed #d3d3d3;
+  margin: 3rem 0 1.5rem 0;
   span {
     background: $body-bg;
     padding: 0 2rem;     
@@ -29,7 +29,7 @@
 .date-month-day {
   color: #999; 
   display: inline-block;
-  font-size: 1.1rem;  
+  font-size: 1rem;  
 }
 .archive__post-title {
   display: inline;
@@ -58,8 +58,61 @@
 .article-list {
   article {
     display: flex;
+    align-items: center;
+    padding-bottom: 0.8rem;
+    
     h3 {
       flex: 1;
+      position: relative;
+      padding-right: 1rem;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: #dbdbdb;
+        transition: all 0.1s ease;
+      }
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        right: 0;
+        top: 45%;
+        z-index: 3;
+      }
+
+      &::after {
+        width: 3px;
+        height: 130%;
+        border-radius: 0px;
+        right: 2px;
+        top: 70%;
+        z-index: 0;
+      }
+
+      @media all and (max-width: $container-width-plus) {
+        &::after {
+          display: none;
+        }
+      }
+
+      &:hover {
+        &::before {
+          background-color: $color-hover;
+        }
+      }
+
     }
+
+    &:last-child h3::after {
+      display: none;
+    }
+  }
+}
+
+article {
+  .entry-content {
+    line-height: 2rem;
   }
 }
