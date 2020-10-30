@@ -6,7 +6,7 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, button, textarea {
-  font-family: Sahel;
+  font-family: IRANSans;
 }
 html, body {
   margin: 0;
@@ -15,10 +15,13 @@ html, body {
   background: $body-bg;
 }
 a {
-  text-decoration: none;
   color: $color;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
   &:hover {
     color: $color-hover;
+    // text-shadow: 0 0 30px $color-hover;
   }
 }
 
@@ -99,9 +102,9 @@ code {
   text-align: center;
   font-size: 1.4rem;
   color: #555; 
-  line-height: .3; 
-  border-bottom: 1px solid #efefef;
-  margin: 3rem 0 1rem 0;
+  line-height: 0; 
+  border-bottom: 1px solid #d3d3d3;
+  margin: 3rem 0 1.5rem 0;
   span {
     background: $body-bg;
     padding: 0 2rem;
@@ -143,6 +146,37 @@ article {
 
 @media all and (max-width: $container-width-plus) {
   html, body {
-    font-size: 110%; 
-  } 
+    font-size: 14px; 
+  }
+
+  .container {
+    max-width: 90%;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .article-list {
+    margin: auto;
+    // max-width: 70%;
+    border-radius: 30px;
+    // background: #fafafa;
+  }
+}
+
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.notf {
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+  }
 }
