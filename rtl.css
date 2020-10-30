@@ -24,7 +24,7 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, button, textarea {
-  font-family: Sahel; }
+  font-family: IRANSans; }
 
 html, body {
   margin: 0;
@@ -33,10 +33,11 @@ html, body {
   background: #fff; }
 
 a {
+  color: #474747;
   text-decoration: none;
-  color: #1D8E9B; }
+  transition: all 0.2s ease; }
   a:hover {
-    color: #156770; }
+    color: #17bcb4; }
 
 hr {
   border: 0;
@@ -72,7 +73,7 @@ blockquote::before {
 
 code {
   background: #b5dadf;
-  color: #156770;
+  color: #17bcb4;
   border-radius: .3rem;
   padding: 0 .4rem; }
 
@@ -124,9 +125,9 @@ code {
   text-align: center;
   font-size: 1.4rem;
   color: #555;
-  line-height: .3;
-  border-bottom: 1px solid #efefef;
-  margin: 3rem 0 1rem 0; }
+  line-height: 0;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 3rem 0 1.5rem 0; }
   .divider span {
     background: #fff;
     padding: 0 2rem; }
@@ -165,48 +166,76 @@ article img {
 
 @media all and (max-width: 42rem) {
   html, body {
-    font-size: 110%; } }
+    font-size: 14px; }
+  .container {
+    max-width: 90%; } }
 
-.header #nav-wrapper {
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
-  border-top: 3px solid #1D8E9B; }
-  .header #nav-wrapper .container {
-    padding: .5rem 0; }
-  .header #nav-wrapper nav ul {
-    display: inline-block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    .header #nav-wrapper nav ul li {
-      display: inline;
-      font-size: 1rem; }
+.main-content {
+  display: flex;
+  flex-wrap: wrap; }
+  .main-content .article-list {
+    margin: auto;
+    border-radius: 30px; }
 
-.header #blog-title {
-  text-align: center;
-  padding: 1rem 0 0 0; }
-  .header #blog-title h1, .header #blog-title h2 {
-    padding: 0;
-    margin: 0; }
-  .header #blog-title h1 {
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
+
+.notf {
+  text-align: center; }
+  .notf h1 {
+    font-size: 5rem; }
+
+.header {
+  text-align: center; }
+  .header #nav-wrapper {
     display: inline-block;
-    font-size: 1.4rem;
-    font-weight: normal; }
-  .header #blog-title h2 {
-    color: #aaa;
-    font-size: 1.2rem; }
+    padding: 1.2rem 5rem;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease !important;
+    margin-top: 2rem;
+    text-align: center;
+    background: #f3f3f3; }
+    .header #nav-wrapper .container {
+      padding: .5rem 0; }
+    .header #nav-wrapper nav ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .header #nav-wrapper nav ul li {
+        display: inline;
+        font-size: 1rem; }
+  .header #blog-title {
+    text-align: center;
+    padding: 1.5rem 0 0 0; }
+    .header #blog-title h1, .header #blog-title h2 {
+      padding: 0;
+      margin: 0; }
+    .header #blog-title h1 {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin-bottom: 0.5rem; }
+    .header #blog-title h2 {
+      color: #aaa;
+      font-weight: 500;
+      font-size: 1.2rem; }
 
 .date {
-  width: 4rem;
+  min-width: 3.5rem;
   display: inline-block; }
 
 .date-year-divider {
   text-align: center;
   font-size: 1.4rem;
   color: #555;
-  line-height: .3;
-  border-bottom: 1px solid #efefef;
-  margin: 3rem 0 1rem 0; }
+  line-height: 0;
+  border-bottom: 2px dashed #d3d3d3;
+  margin: 3rem 0 1.5rem 0; }
   .date-year-divider span {
     background: #fff;
     padding: 0 2rem; }
@@ -223,7 +252,7 @@ article img {
 .date-month-day {
   color: #999;
   display: inline-block;
-  font-size: 1.1rem; }
+  font-size: 1rem; }
 
 .archive__post-title {
   display: inline;
@@ -256,13 +285,46 @@ article img {
   padding: 0 .4rem; }
 
 .article-list article {
-  display: flex; }
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.8rem; }
   .article-list article h3 {
-    flex: 1; }
+    flex: 1;
+    position: relative;
+    padding-right: 1rem; }
+    .article-list article h3::before, .article-list article h3::after {
+      content: '';
+      position: absolute;
+      background-color: #dbdbdb;
+      transition: all 0.1s ease; }
+    .article-list article h3::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      right: 0;
+      top: 45%;
+      z-index: 3; }
+    .article-list article h3::after {
+      width: 3px;
+      height: 130%;
+      border-radius: 0px;
+      right: 2px;
+      top: 70%;
+      z-index: 0; }
+    @media all and (max-width: 42rem) {
+      .article-list article h3::after {
+        display: none; } }
+    .article-list article h3:hover::before {
+      background-color: #17bcb4; }
+  .article-list article:last-child h3::after {
+    display: none; }
+
+article .entry-content {
+  line-height: 2rem; }
 
 #footer {
   text-align: center;
-  padding: 2rem 0; }
+  padding: 1rem 0; }
   #footer .container ul {
     display: inline-block;
     list-style-type: none;
@@ -275,19 +337,23 @@ article img {
     margin: auto; }
     #footer #cloud-tags .tag-cloud-link {
       display: inline-block;
+      color: black;
+      font-size: 0.8rem !important;
       background: #f3f3f3;
-      font-size: .7rem;
-      padding: 0 .4rem;
+      margin-left: 0.5rem;
+      padding: 0.2rem 0.7rem;
+      margin-bottom: 0.5rem;
       -webkit-border-radius: 0.3rem;
       -moz-border-radius: 0.3rem;
       -ms-border-radius: 0.3rem;
       border-radius: 0.3rem;
-      cursor: pointer;
-      margin: .1rem .2rem; }
+      cursor: pointer; }
       #footer #cloud-tags .tag-cloud-link:hover {
-        background: #eee; }
+        color: white;
+        background: #17bcb4; }
   #footer #copyright-stuff {
-    font-size: .8rem; }
+    font-size: .8rem;
+    padding: 1rem 0 0 0; }
 
 .post-date-divider {
   text-align: center;
@@ -343,8 +409,6 @@ pre {
 
 article {
   color: #333; }
-  article .post-title {
-    font-size: 2rem; }
   article .comments-number {
     color: #555;
     font-size: .9rem; }
@@ -398,7 +462,7 @@ article {
     content: 'author';
     display: inline-block;
     margin: 0 .5rem;
-    background: #156770;
+    background: #17bcb4;
     font-size: .5rem;
     color: #fff;
     -webkit-border-radius: 0.1rem;
