@@ -1,8 +1,18 @@
 .header {  
+  text-align: center;
+
   #nav-wrapper {
-    background: #fafafa;
-    border-bottom: 1px solid #eee;
-    border-top: 3px solid $color;
+    display: inline-block;
+    padding: 1.2rem 5rem;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease !important;
+    // box-shadow: 18px 20px 60px #e3e3e3, 0 0 60px #f8f8f8;
+    margin-top: 2rem;
+    text-align: center;
+    background: #f3f3f3;
+    // border-bottom: 1px solid #eee;
+    // border-top: 3px solid $color;
     .container { 
       padding: .5rem 0;
     }
@@ -21,7 +31,8 @@
   }
   #blog-title { 
     text-align: center; 
-    padding: 1rem 0 0 0;
+    padding: 1.5rem 0 0 0;
+
     h1, h2 {
       padding: 0;
       margin: 0;
@@ -30,9 +41,11 @@
       display: inline-block;
       font-size: 1.4rem;
       font-weight: normal;
+      margin-bottom: 0.5rem;
     }
     h2 {
       color: #aaa;
+      font-weight: 500;
       font-size: 1.2rem;
     }
   }

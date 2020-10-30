@@ -14,19 +14,20 @@
 <body>
 <div class="wrapper">
     <header class="header">
+        <div id="blog-title">
+            <h1 class="brackets"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <h2><?php bloginfo('description'); ?></h2>
+        </div><!--/#blog-title-->
         <div id="nav-wrapper">
-            <section class="container">
+          <section>
             <nav>
             <ul>
                 <?php 
                 // show pages in header!
-                $pages = get_pages(array(
-                  'offset'       => 0,
-                  'post_type'    => 'page',
-                  'post_status'  => 'publish',
-                )); 
+                $pages = wp_get_nav_menu_items(16);
+
                 foreach($pages as $page) { ?>
-                  <li class="brackets"><a href="<?= get_permalink($page->ID); ?>"><?= $page->post_title ?></a></li>
+                  <li class="brackets"><a href="<?= $page->url ?>"><?= $page->title ?></a></li>
                 <?php } ?>
 
                 <?php
@@ -63,10 +64,6 @@
               ?>
             </ul>
           </nav>
-            </section><!--/.container-->
+          </section><!--/.container-->
         </div><!--/#nav-wrapper-->
-        <div id="blog-title">
-            <h1 class="brackets"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-            <h2><?php bloginfo('description'); ?></h2>
-        </div><!--/#blog-title-->
     </header><!--/.header-->
