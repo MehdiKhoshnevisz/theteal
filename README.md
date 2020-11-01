@@ -2,10 +2,8 @@
 
 It's a minimal and light wordpress blog theme :art:.
 
-[Live persian demo](https://theyahya.com/blog/)
+[Live persian demo](mehdikhoshnevisz.ir)
 
-## Screenshot
-![Screenshot](https://raw.githubusercontent.com/TheYahya/thewhite/master/screenshot.png)
 
 ## To-Do list
 
@@ -20,10 +18,6 @@ It's a minimal and light wordpress blog theme :art:.
 - [ ] Add fonts with npm except the way already doing it!
 - [ ] Add theme color field to theme panel.
 - [ ] to be continue ...
-
-## Contributors
-
-- Parsa Kafi ([@parsa-kafi](https://github.com/parsa-kafi))
 
 ## License
 
