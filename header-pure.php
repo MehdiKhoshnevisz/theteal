@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#1D8E9B">
+    <meta name="theme-color" content="#17bcb4">
   <title><?php wp_title( '&raquo;', true, '' ); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
