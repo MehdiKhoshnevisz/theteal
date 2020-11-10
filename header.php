@@ -24,7 +24,7 @@
             <ul>
                 <?php 
                 // show pages in header!
-                $pages = wp_get_nav_menu_items(16);
+                $pages = wp_get_nav_menu_items(5);
 
                 foreach($pages as $page) { ?>
                   <li class="brackets"><a href="<?= $page->url ?>"><?= $page->title ?></a></li>
