@@ -7,8 +7,10 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <h1 class="post-title">
                 <?php the_title(); ?>
-            </h1> 
-            <p class="comments-number"><?php comments_number(__('No Comments'), '1 ' . __('Comment'), '% ' . __('Comments')); ?></p>
+            </h1>
+            <div>
+                <p class="comments-number"><?php comments_number(__('بدون دیدگاه'), '1 ' . __('دیدگاه'), '% ' . __('دیدگاه‌ها')); ?></p>
+            </div>
             <div class="entry-content">
                 <?php the_content(); ?>
             </div>
