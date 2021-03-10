@@ -10,12 +10,12 @@ Tags: personal, white, simple, persian, farsi
 Text Domain: Just White & Simple!
 */
 @font-face {
-  font-family: IRANSans;
-  src: url('fonts/iransans/IRANSansWeb(FaNum).eot');
-  src: url('fonts/iransans/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),
-        url('fonts/iransans/IRANSansWeb(FaNum).woff') format('woff'),
-        url('fonts/iransans/IRANSansWeb(FaNum).woff2') format('woff2'),
-        url('fonts/iransans/IRANSansWeb(FaNum).ttf') format('truetype');
+  font-family: Sahel;
+  src: url('../fonts/sahel/Sahel-Black-FD.eot');
+  src: url('../fonts/sahel/Sahel-Black-FD.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/sahel/Sahel-Black-FD.woff') format('woff'),
+        url('../fonts/sahel/Sahel-Black-FD.woff2') format('woff2'),
+        url('../fonts/sahel/Sahel-Bold-FD.ttf') format('truetype');
   font-weight: normal;
 }
 
