@@ -1,10 +1,12 @@
 #comments {
-	margin-top: 2em;
+	margin: 3rem 0;
+
 	ol {
 		list-style: none;
+		padding: 0;
 		li {
-			border-top: 1px solid #efefef;
 			padding: 1rem 0;
+			margin-bottom: 1rem;
 
 			.comment-author {
 				display: flex;
@@ -15,6 +17,11 @@
 					display: inline-block;
 					margin: .3rem .5rem 0 0; 
 					font-size: .9rem;
+
+					.url {
+						font-style: normal;
+						font-weight: 500;
+					}
 				}
 				.says {
 					display: none;
@@ -30,14 +37,12 @@
 			}
 
 			.reply {
-				margin-bottom: .5rem;
-				text-align: left;
+				text-align: right;
 				a {
-					background: $btn-success-bg;
 					padding: 0 .4rem;
 					font-size: .8rem;
-					color: $btn-success-color;
-					@include border-radius($btn-success-border-radius);
+					color: $color;
+					font-weight: 800;
 				}
 			}
 
@@ -54,13 +59,14 @@
 	.bypostauthor {
 		.comment-author-label {
 			content: 'author';
+			font-style: normal;
 			display: inline-block;
 			margin: 0 .5rem;
 			background: $color-hover;
-			font-size: .5rem;
+			font-size: .6rem;
 			color: #fff;
 			@include border-radius(.1rem);
-			padding: 0 .2rem;
+			padding: 0 .3rem;
 		}
 	}
 
@@ -100,14 +106,15 @@
 			margin-right: 2.5%; 
 		}
 		input[name=submit] { 
-			background-color: #5b5;
+			background-color: $color;
 			border: none;
+			padding: 1rem;
 			width: 99%;
 			color: #fff;
 			cursor: pointer;
 			font-weight: 700; 
 			&:hover {
-				background-color: #5a5;
+				background-color: $color-hover;
 			}
 		}
 	}
