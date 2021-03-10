@@ -4,15 +4,17 @@
 }
 
 .date-year-divider { 
-  text-align: center;
+  margin-top: 2rem;
   font-size: 1.4rem;
-  color: #555;
-  line-height: 0;
-  border-bottom: 2px dashed #d3d3d3;
-  margin: 3rem 0 1.5rem 0;
+  margin-bottom: 0.8rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
   span {
+    font-weight: 900;
     background: $body-bg;
-    padding: 0 2rem;     
   }
 }
 
@@ -27,15 +29,20 @@
   color: #444;
 }
 .date-month-day {
-  color: #999; 
-  display: inline-block;
   font-size: 1rem;  
+  font-weight: 700;
+  color: #7A7A7A; 
+  display: inline-block;
 }
 .archive__post-title {
-  display: inline;
   margin: 0;
+  display: inline;
   font-weight: normal;
   font-size: 1.1rem;
+
+  a {
+    font-weight: 700;
+  }
 }
 .archive-comment-count {
   display: inline-block;
@@ -73,23 +80,23 @@
         transition: all 0.1s ease;
       }
 
-      &::before {
-        width: 8px;
-        height: 8px;
-        border-radius: 100%;
-        right: 0;
-        top: 45%;
-        z-index: 3;
-      }
+      // &::before {
+      //   width: 8px;
+      //   height: 8px;
+      //   border-radius: 100%;
+      //   right: 0;
+      //   top: 45%;
+      //   z-index: 3;
+      // }
 
-      &::after {
-        width: 3px;
-        height: 130%;
-        border-radius: 0px;
-        right: 2px;
-        top: 70%;
-        z-index: 0;
-      }
+      // &::after {
+      //   width: 3px;
+      //   height: 130%;
+      //   border-radius: 0px;
+      //   right: 2px;
+      //   top: 70%;
+      //   z-index: 0;
+      // }
 
       @media all and (max-width: $container-width-plus) {
         &::after {
