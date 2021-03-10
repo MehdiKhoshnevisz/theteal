@@ -313,6 +313,7 @@ article {
       @media all and (max-width: 768px) {
         display: flex;
         opacity: 0;
+        z-index: -1;
         transform: scale(0.8);
         transition: all 0.4s ease;
         position: fixed;
