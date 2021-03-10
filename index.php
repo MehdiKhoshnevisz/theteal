@@ -2,11 +2,13 @@
 <main class="main-content container"> 
     <div class="main-content__right-side">
         <?php 
+            if ( !is_category() ):
+
             $recent_posts = wp_get_recent_posts(array(
             'numberposts' => 1, 
             'post_status' => 'publish' ));
             foreach( $recent_posts as $post_item ) :  
-            $the_excerpt = get_the_excerpt($post_item[0]);
+            $the_excerpt = get_the_excerpt($post_item['ID']);
             ?>
 
             <div class="blog-last-post">
@@ -23,7 +25,19 @@
                 </div>
             </div>
             
-        <?php endforeach ?>
+        <?php endforeach; ?>
+
+        <?php else: 
+            $category_title = get_queried_object()->cat_name;    
+        ?>
+            <div>
+                <span style="
+                font-weight: 700;
+                font-size: 2.5rem;">
+                <?php echo $category_title; ?>
+                </span>
+            </div>
+        <?php endif; ?>
 
         <div class="article-wrapper">
 
