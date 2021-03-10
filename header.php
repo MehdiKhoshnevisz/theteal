@@ -12,58 +12,33 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<div class="wrapper">
+<div class="main-wrapper container">
     <header class="header">
         <div id="blog-title">
             <h1 class="brackets"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-            <h2><?php bloginfo('description'); ?></h2>
         </div><!--/#blog-title-->
         <div id="nav-wrapper">
           <section>
-            <nav>
-            <ul>
-                <?php 
-                // show pages in header!
-                $pages = wp_get_nav_menu_items(5);
-
-                foreach($pages as $page) { ?>
-                  <li class="brackets"><a href="<?= $page->url ?>"><?= $page->title ?></a></li>
-                <?php } ?>
-
-                <?php
-                // header links from Theme panel
-                $first_header_link = get_option('first_header_url');
-                $first_header_link_text = get_option('first_header_url_text');
-                if($first_header_link != null && $first_header_link_text != null){?>
-                <li class="brackets"><a href="<?=$first_header_link?>"?><?=$first_header_link_text?></a></li>
-                <?php }
-
-                $second_header_url = get_option('second_header_url');
-                $second_header_url_text = get_option('second_header_url_text');
-                if($second_header_url != null && $second_header_url_text != null){?>
-                <li class="brackets"><a href="<?=$second_header_url?>"><?=$second_header_url_text?></a></li> 
-                <?php }
-
-                $third_header_url = get_option('third_header_url');
-                $third_header_url_text = get_option('third_header_url_text');
-                if($third_header_url != null && $third_header_url_text != null){?>
-                <li class="brackets"><a href="<?=$third_header_url?>"><?=$third_header_url_text?></a></li>
-                <?php }
-
-                $fourth_header_url = get_option('fourth_header_url');
-                $fourth_header_url_text = get_option('fourth_header_url_text');
-                if($fourth_header_url != null && $fourth_header_url_text != null){?>
-                <li class="brackets"><a href="<?=$fourth_header_url?>"><?=$fourth_header_url_text?></a></li>
-                <?php }
-
-                $fifth_header_url = get_option('fifth_header_url');
-                $fifth_header_url_text = get_option('fifth_header_url_text');
-                if ($fifth_header_url != null && $fifth_header_url_text != null ) { ?>
-                <li class="brackets"><a href="<?=$fifth_header_url?>"><?=$fifth_header_url_text?></a></li>
-                <?php }
-              ?>
-            </ul>
-          </nav>
+            <input type="checkbox" />
+            <svg class="blog-menu-icon" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <g>
+                <g>
+                  <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20    C512,404.954,503.046,396,492,396z"/>
+                </g>
+              </svg>
+              <nav>
+              <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) );?>
+            </nav>
           </section><!--/.container-->
         </div><!--/#nav-wrapper-->
     </header><!--/.header-->
